@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='main_app'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <style>
+        .static_width {
+            width: 500px;
+            max-width: 500px;
+        }
+        .list{
+            max-height: 500px;
+            overflow: auto;
+        }
+        .point {
+            border-bottom: 1px solid black;
+        }
+        .point:hover{
+            background-color: rgb(211, 212, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" ng-controller='main_func'>
+        <div class="row align-items-center">
+            <div class="col align-self-center">
+                <input type="text" class="static_width" ng-model='inputData' ng-change='changeWacher()'>
+                <div class="static_width list">
+                    <div class="point" ng-repeat="item in answer">{{item}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/angular-1.7.8/angular.min.js"></script>
+    <script src="lib/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
